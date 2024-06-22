@@ -25,13 +25,15 @@ Query and retrieve stored data based on file type.
 #### Clone the repository:
 ```git clone https://github.com/tamilselvanarjun/mysuperdatacompany.git```
 
-then
+Open the command prompt navigate it to mysuperdatacompany directory
 
 ```cd mysuperdatacompany```
 
 Install dependencies:
 
 ```pip install -r requirements.txt```
+
+#### Please ensure docker service is up and running before executing below commands:
 
 #### Run migrations:
 ```docker-compose run web python manage.py makemigrations```
@@ -44,14 +46,14 @@ Install dependencies:
 
 ####  API endpoint:
 
-1. Access the file upload form at http://127.0.0.1:8000/upload/.
+1. Access the file upload form at http://localhost:8000/upload/.
 Use the form to upload CSV or JSON files.
 
 <img src="file_upload.png" width="400px">
 
 
 2. Query the uploaded data via the API endpoint
-To retrieve all the data http://127.0.0.1:8000/query/.
+To retrieve all the data http://localhost:8000/query/.
 
 To retrieve the all csv file content: http://localhost:8000/data/query/?type=csv
 
