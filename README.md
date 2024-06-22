@@ -3,14 +3,21 @@ This django project is a web application for uploading and processing files (CSV
 
 #### Code Structure
 ```
-.
+mysuperdatacompany/
 ├── dataupload/
 │   ├── forms.py
 │   ├── models.py
 │   ├── views.py
 │   ├── templates/
 │   │   └── upload.html
-│   └── ...
+│   ├── urls.py
+│   ├── __init__.py
+│   └── tests.py
+├── mysuperdatacompany/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── wsgi.py
 ├── manage.py
 └── README.md
 
@@ -47,6 +54,7 @@ Use the form to upload CSV or JSON files.
 
 
 2. Query the uploaded data via the API endpoint
+
 To retrieve all the data http://localhost:8000/query/.
 
 To retrieve the all csv file content: http://localhost:8000/data/query/?type=csv
@@ -57,23 +65,24 @@ To retrieve all json data stored: http://localhost:8000/data/query/?type=json
 
 <img src="api_json.png" width="400px">
 
+#### For any changes in model Run migrations:
+```docker-compose run web python manage.py makemigrations```
+
+####  To Migrate changes to DB:
+```docker-compose run web python manage.py migrate```
+
 ### Design Patterns
+
 ####  Strategy Pattern
 The Strategy pattern is used to define a family of algorithms (file parsers), encapsulate each one, and make them interchangeable. The FileParser abstract class defines the interface for all file parsers, and concrete implementations (CSVFileParser and JSONFileParser) provide the specific parsing logic.
 
 ####  Factory Pattern
 The Factory pattern is used to create objects without specifying the exact class of object that will be created. The FileParserFactory class provides a static method to return the appropriate parser instance based on the file extension.
 
-#### For any model changes Run migrations:
-```docker-compose run web python manage.py makemigrations```
-
-####  Migrate:
-```docker-compose run web python manage.py migrate```
-
 #### Run the unit tests:
 Use the following command to run your tests:
-#### Prerequisites
 
+#### Prerequisites:
 #### Start the Local PostgreSQL Server: 
 Make sure your local PostgreSQL server is running and accessible. You can typically start it using a service manager or directly from the command line, depending on your operating system.
 
