@@ -15,17 +15,23 @@ This django project is a web application for uploading and processing files (CSV
 └── README.md
 
 ```
-# Table of Contents
+### Table of Contents
 
-### Features
+#### Features
 Upload CSV and JSON files.
 Parse and store the data from uploaded files.
 Query and retrieve stored data based on file type.
 
 #### Clone the repository:
-git clone https://github.com/yourusername/yourproject.git
+```git clone https://github.com/tamilselvanarjun/mysuperdatacompany.git```
+
+then
+
+```cd mysuperdatacompany```
 
 Install dependencies:
+
+```pip install -r requirements.txt```
 
 #### Run migrations:
 ```docker-compose run web python manage.py makemigrations```
@@ -57,8 +63,19 @@ The Strategy pattern is used to define a family of algorithms (file parsers), en
 ####  Factory Pattern
 The Factory pattern is used to create objects without specifying the exact class of object that will be created. The FileParserFactory class provides a static method to return the appropriate parser instance based on the file extension.
 
-#### Run the tests:
+#### Run the unit tests:
 Use the following command to run your tests:
+#### Prerequisites
+
+#### Start the Local PostgreSQL Server: 
+Make sure your local PostgreSQL server is running and accessible. You can typically start it using a service manager or directly from the command line, depending on your operating system.
+
+#### Run the Django Server: 
+Start the Django development server.
+
+#### Configure Django to Use Local PostgreSQL for Testing: 
+Update your Django settings to point to the local PostgreSQL instance for testing.
+In settings.py go to DATABASES section change HOST = 'localhost'
 
 ```python manage.py test```
 
