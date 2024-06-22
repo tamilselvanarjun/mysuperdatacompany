@@ -40,7 +40,7 @@ Install dependencies:
 
 ```pip install -r requirements.txt```
 
-#### Please ensure docker service is up and running before executing below commands:
+#### Please make sure docker service is up and running before executing below commands:
 
 ####  Start the development server:
 ```docker-compose up```
