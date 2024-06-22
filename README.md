@@ -1,7 +1,7 @@
-## File Upload and Data Management System
+## File upload and Data Management System
 This django project is a web application for uploading and processing files (CSV and JSON) and querying the uploaded data. It follows a modular design using the Strategy and Factory design patterns to handle different file types.
 
-#### Code Structure
+#### Code structure
 ```
 mysuperdatacompany/
 ├── dataupload/
