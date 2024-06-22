@@ -35,12 +35,6 @@ Install dependencies:
 
 #### Please ensure docker service is up and running before executing below commands:
 
-#### Run migrations:
-```docker-compose run web python manage.py makemigrations```
-
-####  Migrate:
-```docker-compose run web python manage.py migrate```
-
 ####  Start the development server:
 ```docker-compose up```
 
@@ -69,6 +63,12 @@ The Strategy pattern is used to define a family of algorithms (file parsers), en
 
 ####  Factory Pattern
 The Factory pattern is used to create objects without specifying the exact class of object that will be created. The FileParserFactory class provides a static method to return the appropriate parser instance based on the file extension.
+
+#### For any model changes Run migrations:
+```docker-compose run web python manage.py makemigrations```
+
+####  Migrate:
+```docker-compose run web python manage.py migrate```
 
 #### Run the unit tests:
 Use the following command to run your tests:
