@@ -52,12 +52,14 @@ Use the form to upload CSV or JSON files.
 
 3. Query the uploaded data via the API endpoint
 To retrieve all the data http://127.0.0.1:8000/query/.
-<img src="api_query.png" width="400px">
 
 To retrieve the all csv file content: http://localhost:8000/data/query/?type=csv
 
+<img src="api_query.png" width="400px">
+
 To retrieve all json data stored: http://localhost:8000/data/query/?type=json
 
+<img src="api_json.png" width="400px">
 ### Design Patterns
 ####  Strategy Pattern
 The Strategy pattern is used to define a family of algorithms (file parsers), encapsulate each one, and make them interchangeable. The FileParser abstract class defines the interface for all file parsers, and concrete implementations (CSVFileParser and JSONFileParser) provide the specific parsing logic.
