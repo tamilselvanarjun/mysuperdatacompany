@@ -45,7 +45,7 @@ Install dependencies:
 ####  Start the development server:
 ```docker-compose up```
 
-####  API endpoint:
+####  API endpoints:
 
 1. Access the file upload form at http://localhost:8000/upload/.
 Use the form to upload CSV or JSON files.
